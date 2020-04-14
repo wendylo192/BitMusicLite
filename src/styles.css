@@ -1,1 +1,53 @@
-/* You can add global styles to this file, and also import other style files */
+* {
+    box-sizing: border-box;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    max-width: 100%;
+    font-family: 'Noto Sans', sans-serif;
+    overflow-x: hidden;
+}
+
+h1 {
+    font-family: 'Fjalla One', sans-serif;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+h3,h4,h5 {
+    color: #333;
+}
+
+.left {
+    float: left;
+}
+
+.center {
+    text-align: center;
+}
+
+img {
+    margin-right: 20px; 
+}
+
+.pt {
+    padding-top: 5%;
+}
+
+.hero {
+    background: #005268;
+    background-image: url('assets/img/hero1.jpg');
+    background-size: auto;
+    background-repeat: no-repeat;
+    background-position-y: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:hover, h3:hover {
+    color: #005268;
+}

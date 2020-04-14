@@ -1,0 +1,227 @@
+.wrapper {
+    display: grid;
+    width: 100vw;
+    height: 100vh;
+    grid-template-columns: 3fr 1fr;
+    grid-template-rows: 50px 80% auto 100px;
+    grid-template-areas: "header header"
+                         "slider slider"
+                         "content sidebar" 
+                         "footer footer";
+}
+
+header {
+    display: grid;
+    grid-template-columns: 20% 1fr 30%;
+    grid-template-areas: "logo . nav";
+}
+
+.title {
+    color: #fff;
+    font-family: 'Fjalla One', sans-serif;
+    font-size: 1.2rem;
+}
+
+.header {
+    grid-area: header;
+    background: none;
+}
+
+.slider {
+    grid-area: slider;
+    background: none;
+    display: flex;
+    align-items: center;
+    align-content: space-between;
+    padding-left: 5em;
+}
+
+.sidebar {
+    display: grid;
+    grid-area: sidebar;
+    grid-gap: 5vw;
+    color: #eee;
+    justify-content: center;
+    text-align: center;
+    background: #ddd;
+}
+
+.content {
+    grid-area: content;
+    background: #ecf0f1;
+    color: #1e262a;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer {
+    display: flex;
+    justify-content: space-evenly;
+    grid-area: footer;
+    background: #4e4e4e;
+    color: #eeeeee;
+    padding-top: 3rem;
+    padding-bottom: 10rem;
+}
+
+/* Media Queries */
+
+@media (min-width: 768px) and (max-width: 1085px) and (orientation: landscape) {
+	.wrapper {
+        grid-template-columns: 3fr 1fr;
+        grid-template-rows: 50px 80% auto 100px;
+        grid-template-areas: "header header"
+                             "slider slider"
+                             "content sidebar" 
+                             "footer footer";
+    }
+    
+    .logo img {
+        width: 20vw;
+        min-width: 150px;
+    }
+
+    i.sm-menu {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .wrapper {
+        grid-template-columns: 100%;
+        grid-template-rows: 50px 10% auto 100px;
+        grid-template-areas: "header"
+                             "sidebar "
+                             "content" 
+                             "footer";
+    }
+
+    .logo img {
+        width: 10vw;
+        min-width: 100px;
+    }
+
+    span.big-menu {
+        display: none;
+    }
+
+    img.ad {
+        display: none;
+    }
+}
+
+.logo img {
+    width: 20vw;
+    max-width: 150px;
+}
+
+.logo {
+    grid-area: logo;
+}
+
+.btn-group {
+    grid-area: nav;
+    padding-top: 1vw;
+    padding-right: 1vw;
+    display: flex;
+    justify-content: space-between;
+}
+
+.btn-group button {
+    background: none; 
+    border: 2px solid rgba(255, 255, 255, 0.5); 
+    border-radius: 10px;
+    color:rgba(255, 255, 255, 0.5); 
+    font-size: 1em;
+    padding: 10px 24px; 
+    cursor: pointer; 
+    float: left; 
+    width: 30%;
+}
+  
+  /* Clear floats (clearfix hack) */
+.btn-group:after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+/* Add a background color on hover */
+.btn-group button:hover {
+    background-color: #fff;
+    color: #005268;
+    transition: 0.6s;
+}
+
+.audio-main {
+    display: flex;
+    justify-content: space-between;
+    width: 100vw;
+    background: #000000;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+}
+
+audio {
+    width: 80vw;
+    filter: invert(100%);
+}
+
+.hero-title {
+    font-size: 1.2rem;
+    width: 70%;
+}
+
+#hero-description {
+    color: rgba(255, 255, 255, 0.7); ;
+}
+
+#youtubeLink {
+    background-color: rgba(255, 255, 255, 0.4);
+    color: #fff;
+    padding: 1em 1.5em;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+.play-button {
+    position: sticky;
+    text-align: center;
+    pointer-events: none;
+    border: none;
+    filter: blur(0);
+    background: none;
+    box-shadow: none;
+    color: #222;
+    /* width: 7vw;
+    height: 7vw; */
+    background: rgba(0, 0, 0, 0.2);
+    border-radius: 50%;
+    border: 2px double #333;
+    padding: 1rem;
+ }
+ .album-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 15vw;
+    height: 15vw;
+    box-shadow: 10px -10px #CCC;
+ }
+ .album-image img {
+    width: 100%;
+ }
+ .album-image img:hover {
+    filter: blur(.1rem);
+ }
+ .container {
+    display: grid;
+    width: 80%;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 5rem;
+    text-align: center;
+    padding: 3rem;
+ }
+
